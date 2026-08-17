@@ -9,9 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.gaipov</groupId>
-    <artifactId>e-commerce</artifactId>
+    <artifactId>microservices-ecommerce</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>e-commerce</name>
+    <packaging>pom</packaging>
+    <name>microservices-ecommerce</name>
     <description>e-commerce</description>
     <url/>
     <licenses>
@@ -20,6 +21,15 @@
     <developers>
         <developer/>
     </developers>
+    <modules>
+        <module>auth-service</module>
+        <module>product-service</module>
+        <module>cart-service</module>
+        <module>order-service</module>
+        <module>payment-service</module>
+        <module>notification-service</module>
+        <module>api-gateway</module>
+    </modules>
     <scm>
         <connection/>
         <developerConnection/>
@@ -32,25 +42,6 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webmvc</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -58,24 +49,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <!-- Source: https://mvnrepository.com/artifact/org.flywaydb/flyway-database-postgresql -->
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-database-postgresql</artifactId>
-            <version>13.3.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <!-- Source: https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-            <version>13.3.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>tools.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
         </dependency>
     </dependencies>
 

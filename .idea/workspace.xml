@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0c61c2a-824a-45d5-a3a2-86579edf9f04" name="Changes" comment="connect flyway">
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/ECommerceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/DTO/CreateOrderDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/JsonType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/OrderItems.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/Orders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/Outbox_events.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/service/impl/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gaipov/ecommerce/ECommerceApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="cc5f5d29-fa64-4432-917a-99d76bb5551b" value="" />
+    </colors>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KhamidG&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KhamidG/e-commerce-microservice.git&quot;,
+    &quot;accountId&quot;: &quot;3b286ffa-5e18-4ec8-90d6-70224ef9fec6&quot;
+  }
+}</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.8775805195558386" />
+      <entry key="MS500" value="3.723713476643527" />
+      <entry key="S2" value="4.617348829384664" />
+      <entry key="S5" value="4.840914055773825" />
+      <entry key="S10" value="4.919412596760082" />
+      <entry key="S30" value="4.974014060178992" />
+      <entry key="S60" value="5.021037590000617" />
+      <entry key="M2" value="5.292440396543563" />
+      <entry key="M5" value="8.570779821964042" />
+      <entry key="M10" value="17.510990826593844" />
+      <entry key="M15" value="26.05394979645696" />
+      <entry key="M30" value="45.268287395611324" />
+      <entry key="H1" value="66.11373503629399" />
+      <entry key="H2" value="83.11264097723118" />
+      <entry key="H4" value="94.32042433599936" />
+      <entry key="D1" value="105.52120189021171" />
+      <entry key="W1" value="107.64061039430413" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.1866524106601497E-138" />
+      <entry key="S10" value="1.1780548516899558E-69" />
+      <entry key="S30" value="2.4183152855465756E-23" />
+      <entry key="S60" value="1.2268932034110538E-11" />
+      <entry key="M2" value="9.150882235562097E-6" />
+      <entry key="M5" value="0.03154596967553632" />
+      <entry key="M10" value="0.5569806240813835" />
+      <entry key="M15" value="1.6679527735654551" />
+      <entry key="M30" value="6.074193582463225" />
+      <entry key="H1" value="13.042604841749899" />
+      <entry key="H2" value="19.840173654841752" />
+      <entry key="H4" value="24.71611505227001" />
+      <entry key="D1" value="29.837302780592903" />
+      <entry key="W1" value="30.830809974963213" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.8222048980464303" />
+      <entry key="MS500" value="3.700550386347553" />
+      <entry key="S2" value="4.610037380001654" />
+      <entry key="S5" value="4.837835517090411" />
+      <entry key="S10" value="4.917846223074719" />
+      <entry key="S30" value="4.973485463725252" />
+      <entry key="S60" value="5.0207679563224925" />
+      <entry key="M2" value="5.292300243947102" />
+      <entry key="M5" value="8.60207485994792" />
+      <entry key="M10" value="18.066509623862906" />
+      <entry key="M15" value="27.718935479284692" />
+      <entry key="M30" value="51.33669066807791" />
+      <entry key="H1" value="79.149822627457" />
+      <entry key="H2" value="102.947736351604" />
+      <entry key="H4" value="119.03333858351998" />
+      <entry key="D1" value="135.35785444321525" />
+      <entry key="W1" value="138.47132423072046" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Hzj9vRJqIya70YUsqfTHWgYsJD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ECommerceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/khamid/dev/Projects/microservices-ecommerce/order-service/src/main/java/com/gaipov/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ECommerceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="e-commerce" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gaipov.ecommerce.ECommerceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0c61c2a-824a-45d5-a3a2-86579edf9f04" name="Changes" comment="" />
+      <created>1786877644192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786877644192</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="connect flyway" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect flyway" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/gaipov/Main.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
