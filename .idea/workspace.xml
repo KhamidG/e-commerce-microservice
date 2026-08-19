@@ -5,28 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c61c2a-824a-45d5-a3a2-86579edf9f04" name="Changes" comment="connect flyway">
-      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/ECommerceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/DTO/CreateOrderDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/JsonType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/OrderItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/OrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/Orders.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/domain/Outbox_events.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/repository/OrderRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gaipov/ecommerce/service/impl/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__init.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gaipov/ecommerce/ECommerceApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/ProductServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/request/CreateProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/request/UpdateProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/response/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -65,61 +60,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.8775805195558386" />
-      <entry key="MS500" value="3.723713476643527" />
-      <entry key="S2" value="4.617348829384664" />
-      <entry key="S5" value="4.840914055773825" />
-      <entry key="S10" value="4.919412596760082" />
-      <entry key="S30" value="4.974014060178992" />
-      <entry key="S60" value="5.021037590000617" />
-      <entry key="M2" value="5.292440396543563" />
-      <entry key="M5" value="8.570779821964042" />
-      <entry key="M10" value="17.510990826593844" />
-      <entry key="M15" value="26.05394979645696" />
-      <entry key="M30" value="45.268287395611324" />
-      <entry key="H1" value="66.11373503629399" />
-      <entry key="H2" value="83.11264097723118" />
-      <entry key="H4" value="94.32042433599936" />
-      <entry key="D1" value="105.52120189021171" />
-      <entry key="W1" value="107.64061039430413" />
+      <entry key="MS100" value="2.139290341025303" />
+      <entry key="MS500" value="4.5146464927234184" />
+      <entry key="S2" value="10.560533727652757" />
+      <entry key="S5" value="14.654358348059342" />
+      <entry key="S10" value="16.64016315946242" />
+      <entry key="S30" value="18.62424631227823" />
+      <entry key="S60" value="19.896172997359596" />
+      <entry key="M2" value="23.722734822051194" />
+      <entry key="M5" value="47.63900220254383" />
+      <entry key="M10" value="86.58832064061177" />
+      <entry key="M15" value="111.97932412588723" />
+      <entry key="M30" value="149.06175925670587" />
+      <entry key="H1" value="174.6279011515397" />
+      <entry key="H2" value="201.3568404666526" />
+      <entry key="H4" value="249.7736575517842" />
+      <entry key="D1" value="469.3212425904811" />
+      <entry key="W1" value="616.5107644638532" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="1.1866524106601497E-138" />
-      <entry key="S10" value="1.1780548516899558E-69" />
-      <entry key="S30" value="2.4183152855465756E-23" />
-      <entry key="S60" value="1.2268932034110538E-11" />
-      <entry key="M2" value="9.150882235562097E-6" />
-      <entry key="M5" value="0.03154596967553632" />
-      <entry key="M10" value="0.5569806240813835" />
-      <entry key="M15" value="1.6679527735654551" />
-      <entry key="M30" value="6.074193582463225" />
-      <entry key="H1" value="13.042604841749899" />
-      <entry key="H2" value="19.840173654841752" />
-      <entry key="H4" value="24.71611505227001" />
-      <entry key="D1" value="29.837302780592903" />
-      <entry key="W1" value="30.830809974963213" />
+      <entry key="MS100" value="5.974331571970494E-160" />
+      <entry key="MS500" value="1.7099417703547876E-32" />
+      <entry key="S2" value="2.1973253011152587E-8" />
+      <entry key="S5" value="0.0017381102680676423" />
+      <entry key="S10" value="0.08431110162730582" />
+      <entry key="S30" value="1.424206681782484" />
+      <entry key="S60" value="3.3856947839375624" />
+      <entry key="M2" value="7.506681417204928" />
+      <entry key="M5" value="21.159778982257354" />
+      <entry key="M10" value="36.8211782433762" />
+      <entry key="M15" value="45.88707318816507" />
+      <entry key="M30" value="58.390141021631884" />
+      <entry key="H1" value="66.49207409077509" />
+      <entry key="H2" value="72.03292959137649" />
+      <entry key="H4" value="77.58080909405763" />
+      <entry key="D1" value="103.71731378889277" />
+      <entry key="W1" value="124.85079647168665" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.8222048980464303" />
-      <entry key="MS500" value="3.700550386347553" />
-      <entry key="S2" value="4.610037380001654" />
-      <entry key="S5" value="4.837835517090411" />
-      <entry key="S10" value="4.917846223074719" />
-      <entry key="S30" value="4.973485463725252" />
-      <entry key="S60" value="5.0207679563224925" />
-      <entry key="M2" value="5.292300243947102" />
-      <entry key="M5" value="8.60207485994792" />
-      <entry key="M10" value="18.066509623862906" />
-      <entry key="M15" value="27.718935479284692" />
-      <entry key="M30" value="51.33669066807791" />
-      <entry key="H1" value="79.149822627457" />
-      <entry key="H2" value="102.947736351604" />
-      <entry key="H4" value="119.03333858351998" />
-      <entry key="D1" value="135.35785444321525" />
-      <entry key="W1" value="138.47132423072046" />
+      <entry key="MS100" value="2.109836805869856" />
+      <entry key="MS500" value="4.501518050850807" />
+      <entry key="S2" value="10.552047179199679" />
+      <entry key="S5" value="14.651157708790668" />
+      <entry key="S10" value="16.718346400942114" />
+      <entry key="S30" value="20.02447793280864" />
+      <entry key="S60" value="23.25058279548515" />
+      <entry key="M2" value="31.18277468015343" />
+      <entry key="M5" value="68.72043076719332" />
+      <entry key="M10" value="123.3276402006384" />
+      <entry key="M15" value="157.79375607794995" />
+      <entry key="M30" value="207.40246888319237" />
+      <entry key="H1" value="241.09083082966777" />
+      <entry key="H2" value="273.3735046605199" />
+      <entry key="H4" value="327.3453179664892" />
+      <entry key="D1" value="573.036240430387" />
+      <entry key="W1" value="741.3611434414889" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -133,6 +128,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -142,7 +138,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.ECommerceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "product-service",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -160,10 +156,17 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
     <configuration name="ECommerceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="e-commerce" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gaipov.ecommerce.ECommerceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gaipov.ecommerce.product.ProductServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
