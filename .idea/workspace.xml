@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c61c2a-824a-45d5-a3a2-86579edf9f04" name="Changes" comment="mapper, dto, entity created">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/service/impl/ProductServiceImpl.java" afterDir="false" />
+    <list default="true" id="b0c61c2a-824a-45d5-a3a2-86579edf9f04" name="Changes" comment="create service methods.">
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/exception/ProductAlreadyExists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/exception/ProductDeleted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/exception/ProductionNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/db/migration/V1__create_product_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/request/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/domain/request/CreateProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/gaipov/ecommerce/product/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +26,7 @@
   </component>
   <component name="DatabaseLocalColorSettings">
     <colors>
+      <entry key="65a344a7-9e23-47f8-a673-9fba8b68c678" value="" />
       <entry key="cc5f5d29-fa64-4432-917a-99d76bb5551b" value="" />
     </colors>
   </component>
@@ -25,6 +36,7 @@
         <option value="com.intellij.jpb.FlywayMigrationScript" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -51,61 +63,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="6.867342917321546E-67" />
-      <entry key="MS500" value="8.466260193564175E-14" />
-      <entry key="S2" value="0.0014958888457921986" />
-      <entry key="S5" value="0.1939345734926663" />
-      <entry key="S10" value="1.089909793740829" />
-      <entry key="S30" value="4.734391961716536" />
-      <entry key="S60" value="7.968819223745192" />
-      <entry key="M2" value="10.994599987503882" />
-      <entry key="M5" value="20.872915258181994" />
-      <entry key="M10" value="49.89660090243636" />
-      <entry key="M15" value="79.1258718277451" />
-      <entry key="M30" value="137.2436999823777" />
-      <entry key="H1" value="187.10099992747726" />
-      <entry key="H2" value="230.66080803594656" />
-      <entry key="H4" value="288.47264833425965" />
-      <entry key="D1" value="518.6877673024834" />
-      <entry key="W1" value="669.6515127852916" />
+      <entry key="MS100" value="1.0789593218788868E-5" />
+      <entry key="MS500" value="0.10153154954452945" />
+      <entry key="S2" value="0.5644822024030657" />
+      <entry key="S5" value="0.7955364839696698" />
+      <entry key="S10" value="0.8919536445312397" />
+      <entry key="S30" value="1.094742192166827" />
+      <entry key="S60" value="2.583818176305008" />
+      <entry key="M2" value="7.516038810744517" />
+      <entry key="M5" value="18.05423157047614" />
+      <entry key="M10" value="25.413863281003316" />
+      <entry key="M15" value="28.685613367846784" />
+      <entry key="M30" value="32.60071705091524" />
+      <entry key="H1" value="37.71793730243437" />
+      <entry key="H2" value="61.84140176335546" />
+      <entry key="H4" value="141.9096236024995" />
+      <entry key="D1" value="569.7522861877725" />
+      <entry key="W1" value="850.7009786479377" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000000062037" />
-      <entry key="MS500" value="1.0057349967591431" />
-      <entry key="S2" value="1.2982808333761287" />
-      <entry key="S5" value="2.065368877182971" />
-      <entry key="S10" value="3.5060679967937003" />
-      <entry key="S30" value="7.596956064628327" />
-      <entry key="S60" value="10.094762917036604" />
-      <entry key="M2" value="11.949274751457727" />
-      <entry key="M5" value="16.91067726913769" />
-      <entry key="M10" value="29.747503838928697" />
-      <entry key="M15" value="41.682412265331344" />
-      <entry key="M30" value="64.09613684502438" />
-      <entry key="H1" value="82.34955570545169" />
-      <entry key="H2" value="94.95080437253866" />
-      <entry key="H4" value="104.61883270168804" />
-      <entry key="D1" value="134.6307216648878" />
-      <entry key="W1" value="156.66701198845527" />
+      <entry key="MS100" value="1.0018350053695586" />
+      <entry key="MS500" value="1.2836138712339884" />
+      <entry key="S2" value="1.729763044896567" />
+      <entry key="S5" value="1.8816023655025984" />
+      <entry key="S10" value="1.9389454890154183" />
+      <entry key="S30" value="2.042851779775442" />
+      <entry key="S60" value="2.9200699319147665" />
+      <entry key="M2" value="6.706849693751692" />
+      <entry key="M5" value="16.8158152339608" />
+      <entry key="M10" value="24.730493460022323" />
+      <entry key="M15" value="28.393602881671214" />
+      <entry key="M30" value="32.80557558611296" />
+      <entry key="H1" value="36.701314872663396" />
+      <entry key="H2" value="50.12944438893792" />
+      <entry key="H4" value="91.56639703813556" />
+      <entry key="D1" value="248.7645055357025" />
+      <entry key="W1" value="322.7403973231418" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.6105044739951897E-9" />
-      <entry key="MS500" value="0.020253620884094083" />
-      <entry key="S2" value="0.6133249779168504" />
-      <entry key="S5" value="1.825483032763575" />
-      <entry key="S10" value="4.251056834937291" />
-      <entry key="S30" value="12.04680172581634" />
-      <entry key="S60" value="17.843816353881426" />
-      <entry key="M2" value="22.799349623242346" />
-      <entry key="M5" value="37.69729420137919" />
-      <entry key="M10" value="79.56849224371392" />
-      <entry key="M15" value="120.73701558741743" />
-      <entry key="M30" value="201.28373439509755" />
-      <entry key="H1" value="269.4138347101224" />
-      <entry key="H2" value="325.590031818767" />
-      <entry key="H4" value="393.07922512805624" />
-      <entry key="D1" value="653.315581274317" />
-      <entry key="W1" value="826.3180199262953" />
+      <entry key="MS100" value="0.032815668768973696" />
+      <entry key="MS500" value="0.6672092434886504" />
+      <entry key="S2" value="1.9034244788831172" />
+      <entry key="S5" value="2.4848503039702847" />
+      <entry key="S10" value="2.7274761426655134" />
+      <entry key="S30" value="3.0948194834371674" />
+      <entry key="S60" value="5.4475803372605585" />
+      <entry key="M2" value="14.128374896100956" />
+      <entry key="M5" value="34.76350290392001" />
+      <entry key="M10" value="50.063809885990494" />
+      <entry key="M15" value="57.017003011485315" />
+      <entry key="M30" value="65.37003362891586" />
+      <entry key="H1" value="74.39908702714303" />
+      <entry key="H2" value="111.95787798383506" />
+      <entry key="H4" value="233.4650963366606" />
+      <entry key="D1" value="818.511909034215" />
+      <entry key="W1" value="1173.440447255073" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -128,6 +140,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.ECommerceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "product-service",
     "kotlin-language-version-configured": "true",
@@ -187,7 +200,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="connect flyway" />
     <MESSAGE value="mapper, dto, entity created" />
-    <option name="LAST_COMMIT_MESSAGE" value="mapper, dto, entity created" />
+    <MESSAGE value="create service methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="create service methods." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

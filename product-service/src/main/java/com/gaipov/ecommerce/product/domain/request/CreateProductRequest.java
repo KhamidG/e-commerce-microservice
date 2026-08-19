@@ -11,5 +11,5 @@ public class CreateProductRequest {
     private String description;
     private BigDecimal price;
     private Integer stockQuantity;
-    private UUID categoryId;
+    private String category;
 }

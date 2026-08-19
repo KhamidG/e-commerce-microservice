@@ -1,6 +1,8 @@
 package com.gaipov.ecommerce.product.service.impl;
 
-import com.gaipov.ecommerce.product.domain.mapper.ProductMapper;
+import com.gaipov.ecommerce.product.domain.entity.Product;
+import com.gaipov.ecommerce.product.domain.exception.ProductAlreadyExists;
+import com.gaipov.ecommerce.product.domain.exception.ProductionNotFound;
 import com.gaipov.ecommerce.product.domain.repository.ProductRepository;
 import com.gaipov.ecommerce.product.domain.request.CreateProductRequest;
 import com.gaipov.ecommerce.product.domain.request.UpdateProductRequest;
@@ -16,15 +18,28 @@ import java.util.UUID;
 @AllArgsConstructor
 public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
-    private final ProductMapper mapper;
+//    private final ProductMapper mapper;
 
     @Override
-    public ProductResponse create(CreateProductRequest request) {
-        return null;
+    public CreateProductRequest create(CreateProductRequest request) {
+        if (productRepository.existsByName(request.getName())) {
+            throw new ProductAlreadyExists("Product already exists");
+        }
+
+        Product product = new Product();
+        product.setName(request.getName());
+        product.setDescription(request.getDescription());
+        product.setPrice(request.getPrice());
+        product.setStockQuantity(request.getStockQuantity());
+        product.setCategory(request.getCategory());
+
+        productRepository.save(product);
+
+        return request;
     }
 
     @Override
-    public ProductResponse getById(UUID id) {
+    public ProductResponse getById(UUID id, Product product) {
         return null;
     }
 
