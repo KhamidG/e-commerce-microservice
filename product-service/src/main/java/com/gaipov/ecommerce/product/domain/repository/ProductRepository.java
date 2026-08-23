@@ -13,7 +13,5 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
 
     Boolean existsByName(String name);
 
-    boolean existByStatus(Boolean status);
-
-    boolean existByActive(Boolean active);
+//    boolean existByActive(Boolean active);
 }
